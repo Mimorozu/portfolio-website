@@ -45,8 +45,6 @@ export default function Gallery() {
                         <div
                             key={index}
                             className="project-card"
-                            onMouseEnter={() => setHoveredProject(index)}
-                            onMouseLeave={() => setHoveredProject(null)}
                         >
                             <h2 className="project-number">{project.number}</h2>
                             <h3 className="project-title">{project.title}</h3>
