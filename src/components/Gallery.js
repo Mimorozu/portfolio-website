@@ -14,20 +14,13 @@ export default function Gallery() {
         },
         {
             number: "02",
-            title: "B2B Marketplace - in prodcuction",
-            tech: "React · Node.js · MongoDB",
+            title: "Portfolio Website",
+            tech: "React · Azure · CI/CD pipeline",
             image: "/project2.png", // Replace with your image
             url: ""
         },
         {
-            number: "02",
-            title: "B2B Marketplace - in prodcuction",
-            tech: "React · Node.js · MongoDB",
-            image: "/project2.png", // Replace with your image
-            url: ""
-        },
-        {
-            number: "02",
+            number: "03",
             title: "B2B Marketplace - in prodcuction",
             tech: "React · Node.js · MongoDB",
             image: "/project2.png", // Replace with your image
