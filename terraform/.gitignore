@@ -1,0 +1,6 @@
+# Terraform provider binaries and cache
+.terraform/
+
+# State files contain sensitive info - never commit these
+terraform.tfstate
+terraform.tfstate.backup

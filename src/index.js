@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import Home from './components/Home';
 import About from './components/About';
 import Gallery from './components/Gallery';
