@@ -634,6 +634,7 @@ div.title {
     gap: 3rem;
     padding: 2rem 0;
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .gallery-a-tag:first-child {
@@ -655,6 +656,7 @@ div.title {
 .project-card:hover {
     padding-left: 1rem;
     border-bottom-color: var(--color-accent-gold);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /* Project Number */
