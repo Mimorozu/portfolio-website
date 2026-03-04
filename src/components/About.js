@@ -22,7 +22,7 @@ export default function About() {
       <Navbar />
       <div className="about-section-1">
         <span className="title">Hi... I'm Ethan!</span>
-        <span className="text">I'm a developer from Birmingham, England. I like building things from scratch and bringing ideas to life!</span>
+        <span className="text">Junior Cloud Engineer with hands-on experience deploying and managing production infrastructure on AWS and Microsoft Azure.</span>
         <button className="about-button" onClick={() => navigate('/contact')}>Get in touch!</button>
       </div>
 
