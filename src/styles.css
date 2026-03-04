@@ -217,6 +217,12 @@ svg text {
     opacity: 0;
 }
 
+.name-wrapper-for-small-screens{ /* secondary title for smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+} 
 /* ------------scroller styling----------- */
 .scroller-cont {
     width: 100%;
@@ -885,7 +891,7 @@ div.title {
     }
 
     nav ul li a {
-        font-size: 1.3rem;
+        font-size: 2rem;
         padding: 0 5px;
     }
 
@@ -912,6 +918,14 @@ div.title {
         margin: 15px;
         text-align: center;
         width: calc(100% - 30px);
+    }
+
+    .name-wrapper{
+        display: none;
+    }
+
+    .name-wrapper-for-small-screens{
+        display: flex;
     }
 
     /* About section */
