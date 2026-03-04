@@ -34,7 +34,7 @@ export default function Gallery() {
 
             <div className="gallery-flex-cont">
                 {projects.map((project, index) => (
-                    // <a className="gallery-a-tag" href={project.url}>
+                     <a className="gallery-a-tag" href={project.url}>
                         <div
                             key={index}
                             className="project-card"
@@ -43,7 +43,7 @@ export default function Gallery() {
                             <h3 className="project-title">{project.title}</h3>
                             <span className="project-tech">{project.tech}</span>
                         </div>
-                    // </a>
+                     </a>
                 ))}
             </div >
         </>
