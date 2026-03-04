@@ -34,11 +34,11 @@ export default function Gallery() {
 
             <div className="gallery-flex-cont">
                 {projects.map((project, index) => (
-                     <a className="gallery-a-tag" href={project.url}>
-                        <div
-                            key={index}
-                            className="project-card"
-                        >
+                     <a 
+                     className="gallery-a-tag" 
+                     href={project.url}
+                     key={index}>
+                        <div className="project-card">
                             <h2 className="project-number">{project.number}</h2>
                             <h3 className="project-title">{project.title}</h3>
                             <span className="project-tech">{project.tech}</span>
