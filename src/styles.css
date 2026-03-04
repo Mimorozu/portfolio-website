@@ -522,7 +522,7 @@ div.title {
 .flex_cont {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.4rem;
     margin-top: 1rem;
     text-align: center;
@@ -541,7 +541,7 @@ div.title {
     color: var(--color-text-primary);
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(184, 115, 51, 0.05) 100%);
     border: 2px solid var(--color-accent-gold);
-    border-radius: 20px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
@@ -570,16 +570,18 @@ div.title {
 }
 
 .icon {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-copper) 100%);
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    
+    background: linear-gradient(-135deg, var(--color-accent-gold) 0%, var(--color-accent-copper) 100%);
+    border-radius:  0% 10% 0% 10%;
     box-shadow: var(--shadow-gold);
 
+
+    /* orignal design */
     position: absolute;
-    left: 50%;
+    right: 0;
     top: 0;
-    transform: translate(-50%, -50%);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Center the icon inside */
@@ -589,7 +591,6 @@ div.title {
 }
 
 .contact_tile:hover .icon {
-    transform: translate(-50%, -50%) scale(1.1);
     box-shadow: var(--glow-gold);
 }
 
