@@ -16,6 +16,8 @@ export default function About() {
     setHoveredLang("Building with technologies");
   };
 
+ 
+
   return (
 
     <>
@@ -79,6 +81,20 @@ export default function About() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             />
+            <img
+              src='/tailwindLogo.png'
+              alt="Tailwind CSS"
+              data-name="Tailwind CSS"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
+            <img
+              src='/nodejsLogo.png'
+              alt="Nodejs"
+              data-name="Nodejs"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
           </div>
           <div className="group">
             <img
@@ -129,22 +145,37 @@ export default function About() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             />
+            <img
+              src='/tailwindLogo.png'
+              alt="Tailwind CSS"
+              data-name="Tailwind CSS"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
+            <img
+              src='/nodejsLogo.png'
+              alt="Nodejs"
+              data-name="Nodejs"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
           </div>
         </div>
+
         <span className="title_two">Cloud Certifications</span>
         <div className="cloud_cert_wrapper">
           <div className="frosty_tile">
-            <img 
-            data-name='AWS Cloud Practitioner'
-            src="/aws-cloud-practitioner.png" 
-            alt="" 
-            srcset="" />
+            <img
+              data-name='AWS Cloud Practitioner'
+              src="/aws-cloud-practitioner.png"
+              alt=""
+              srcset="" />
           </div>
           <div className="frosty_tile">
-            <img 
-            src="/Adobe Express - file.png" 
-            alt="" 
-            srcset="" />
+            <img
+              src="/Adobe Express - file.png"
+              alt=""
+              srcset="" />
           </div>
         </div>
       </div>
