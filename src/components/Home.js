@@ -36,7 +36,7 @@ export default function Home() {
                                 <text x="50%" y="100%" text-anchor="middle">NERWAL</text>
                             </svg>
                         </div>
-                    <span className="job-title"> Cloud Engineer | Web developer </span>
+                    <span className="job-title"> Full Stack Cloud Developer </span>
                 </div>
 
             </div>
