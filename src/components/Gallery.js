@@ -14,10 +14,10 @@ export default function Gallery() {
         },
         {
             number: "02",
-            title: "Portfolio Website",
-            tech: "React · Azure · CI/CD pipeline",
+            title: "Claim Management System",
+            tech: "React · CRUD · CI/CD pipeline",
             image: "/project2.png", // Replace with your image
-            url: ""
+            url: "https://claims-record-manager.vercel.app/login"
         },
         {
             number: "03",
