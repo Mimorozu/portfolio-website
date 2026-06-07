@@ -6,8 +6,8 @@ export default function Gallery() {
     const projects = [
         {
             number: "01",
-            title: "Business Directory",
-            tech: "PHP · SQL · AWS",
+            title: "Kitchen Worktop Experts V2.0",
+            tech: "API · PHP · AWS ",
             image: "/kweScreenShot.png",
             url: "https://www.kitchenworktopexperts.co.uk/"
 
@@ -15,7 +15,7 @@ export default function Gallery() {
         {
             number: "02",
             title: "Claim Management System",
-            tech: "React · CRUD · CI/CD pipeline",
+            tech: "API · CRUD · CI/CD pipeline",
             image: "/project2.png", // Replace with your image
             url: "https://claims-record-manager.vercel.app/login"
         },

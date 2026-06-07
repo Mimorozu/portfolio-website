@@ -16,7 +16,19 @@ export default function About() {
     setHoveredLang("Building with technologies");
   };
 
- 
+  const certifications = [
+    { title: "ITOL AWS Certification", file: "/itol-aws-cert.pdf" },
+    { title: "ITOL Azure Certification", file: "/itol-azure-cert.pdf" },
+    { title: "React Certification", file: "/react-cert.pdf" },
+    { title: "Python Certification", file: "/python-cert.pdf" },
+    { title: "JavaScript Certification", file: "/javascript-cert.pdf" },
+    { title: "Tailwind CSS Certification", file: "/tailwind-cert.pdf" },
+    { title: "GitHub Certification", file: "/github-cert.pdf" },
+    { title: "HTML & Web Certification", file: "/html-and-web-cert.pdf" },
+    { title: "CSS Certification", file: "/css-cert.pdf" },
+    { title: "Database Certification", file: "/database-cert.pdf" },
+  ];
+
 
   return (
 
@@ -162,21 +174,39 @@ export default function About() {
           </div>
         </div>
 
+        <button className="tech-cta" onClick={() => navigate('/gallery')}>
+          See these technologies in action &#8594;
+        </button>
+
         <span className="title_two">Cloud Certifications</span>
         <div className="cloud_cert_wrapper">
           <div className="frosty_tile">
             <img
-              data-name='AWS Cloud Practitioner'
               src="/aws-cloud-practitioner.png"
-              alt=""
-              srcset="" />
+              alt="AWS Cloud Practitioner certification badge" />
           </div>
           <div className="frosty_tile">
             <img
-              src="/Adobe Express - file.png"
-              alt=""
-              srcset="" />
+              src="/azure-fundamentals.png"
+              alt="Microsoft Azure Fundamentals certification badge" />
           </div>
+        </div>
+
+        <span className="title">Other Certifications</span>
+        <div className="cert_list">
+          {certifications.map((cert, index) => (
+            <a
+              key={cert.file}
+              className="cert_row"
+              href={cert.file}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="cert_row_number">{String(index + 1).padStart(2, '0')}</span>
+              <span className="cert_row_title">{cert.title}</span>
+              <span className="cert_row_link">View certificate &#8599;</span>
+            </a>
+          ))}
         </div>
       </div>
 
