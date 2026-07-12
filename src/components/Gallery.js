@@ -21,6 +21,13 @@ export default function Gallery() {
         },
         {
             number: "03",
+            title: "The Movement - In Production",
+            tech: "API · E-Commerce",
+            image: "/project2.png", // Replace with your image
+            url: "https://the-movement-front-end.vercel.app/"
+        },
+        {
+            number: "04",
             title: "B2B Marketplace - in prodcuction",
             tech: "React · Node.js · MongoDB",
             image: "/project2.png", // Replace with your image

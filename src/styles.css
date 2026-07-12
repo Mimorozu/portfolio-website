@@ -187,15 +187,15 @@ svg text {
     /* white outline */
     stroke-width: 1px;
 
-    stroke-dasharray: 3000;
+    stroke-dasharray: 1000;
     /* total length of the stroke path */
-    stroke-dashoffset: 3000;
+    stroke-dashoffset: 1000;
     /* hides it all at the start */
 
     /* ... styles from step 3 ... */
     animation:
-        drawStroke 25s linear 0.3s forwards,
-        fillText 5s ease 4s forwards;
+        drawStroke 1s linear 0.3s forwards,
+        fillText 6s ease 2s forwards;
 }
 
 .job-title {
