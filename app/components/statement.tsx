@@ -24,6 +24,15 @@ export function Statement() {
         <p className={styles.support}>
           <Words text={SUPPORT} />
         </p>
+        <a
+          href="https://wa.me/447389185503"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.whatsappButton}
+          data-word
+        >
+          Message on WhatsApp
+        </a>
       </div>
     </div>
   );

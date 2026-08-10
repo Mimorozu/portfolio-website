@@ -34,6 +34,7 @@ const routes = [
     subtitle: "Placeholder — page content coming soon.",
     accent: true,
     column: 2,
+    parallax: 1.8,
   },
   {
     path: "/contact",
@@ -51,10 +52,11 @@ const routes = [
 export function HeroGrid() {
   const pathname = usePathname();
   const active = routes.find((route) => route.path === pathname);
+  const parallaxMultiplier = active?.parallax ?? 1;
 
-  const nestedLine1Ref = useParallax<HTMLSpanElement>(0.6);
-  const nestedLine2Ref = useParallax<HTMLSpanElement>(0.6);
-  const nestedLine3Ref = useParallax<HTMLSpanElement>(0.6);
+  const nestedLine1Ref = useParallax<HTMLSpanElement>(0.6 * parallaxMultiplier);
+  const nestedLine2Ref = useParallax<HTMLSpanElement>(0.6 * parallaxMultiplier);
+  const nestedLine3Ref = useParallax<HTMLSpanElement>(0.6 * parallaxMultiplier);
 
   // Routes outside the fixed nav (e.g. /projects/[slug] detail pages) have no hero image or
   // headline to show — render nothing rather than a full-viewport empty grid.
@@ -97,7 +99,12 @@ export function HeroGrid() {
       ))}
 
       {active && (
-        <HeroCopy title={active.title} subtitle={active.subtitle} accent={active.accent} />
+        <HeroCopy
+          title={active.title}
+          subtitle={active.subtitle}
+          accent={active.accent}
+          parallax={parallaxMultiplier}
+        />
       )}
     </div>
   );
@@ -110,13 +117,15 @@ function HeroCopy({
   title,
   subtitle,
   accent,
+  parallax,
 }: {
   title: string;
   subtitle: string;
   accent: boolean;
+  parallax: number;
 }) {
   const lines = title.split("\n");
-  const copyBoxRef = useParallax<HTMLDivElement>(0.3, "margin");
+  const copyBoxRef = useParallax<HTMLDivElement>(0.3 * parallax, "margin");
 
   return (
     <div className={styles.copy}>

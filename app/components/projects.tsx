@@ -37,7 +37,7 @@ export function Projects() {
         <span className={styles.label}>Selected Work</span>
         <div className={styles.headingGroup}>
           <h2 className={`${styles.heading} ${titleVisible ? styles.titleVisible : ""}`}>
-            Projects
+            Selected Projects
           </h2>
           <p className={`${styles.subtitle} ${titleVisible ? styles.titleVisible : ""}`}>
             Placeholder — a selection of things I&apos;ve built. Click one for more.

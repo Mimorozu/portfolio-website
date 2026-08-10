@@ -3,6 +3,24 @@ import { ImageReveal } from "./image-reveal";
 import type { Project } from "./projects-data";
 import styles from "./project-detail.module.css";
 
+function ArrowIcon() {
+  return (
+    <svg
+      aria-hidden
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M7 17 17 7M8 7h9v9" />
+    </svg>
+  );
+}
+
 export function ProjectDetail({ project }: { project: Project }) {
   return (
     <article>
@@ -35,7 +53,40 @@ export function ProjectDetail({ project }: { project: Project }) {
         </Link>
 
         <div className={styles.bodyGrid}>
-          <p className={styles.description}>{project.description}</p>
+          <div className={styles.descriptionWrapper}>
+            <div className={styles.description}>
+              {project.description.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
+            {(project.website || project.crmDemoUrl) && (
+              <div className={styles.actions}>
+                {project.website && (
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.websiteLink}
+                  >
+                    Visit Website
+                    <ArrowIcon />
+                  </a>
+                )}
+                {project.crmDemoUrl && (
+                  <a
+                    href={project.crmDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.crmLink}
+                  >
+                    Visit CRM
+                    <ArrowIcon />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+
 
           <div className={styles.infoGrid}>
             <div className={styles.infoCell}>
