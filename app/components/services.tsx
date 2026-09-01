@@ -14,7 +14,7 @@ const services = [
   {
     title: "AI Solutions",
     description:
-      "Fast, modern interfaces that scale from prototype to production.",
+      "AI-driven features and automation that give your product an edge.",
     imageUrl: "/chip.jpg",
     // The chip sits left-of-center in the source photo; the 4:3 tile crop otherwise
     // centers on the full 16:9 frame and cuts into it.
@@ -23,27 +23,16 @@ const services = [
   {
     title: "Website & Web Applications",
     description:
-      "Streamlined tooling and automation that removes repetitive work.",
+      "Fast, modern interfaces that scale from prototype to production.",
     imageUrl: "/world.png",
   },
   {
-    title: "AI Solutions",
+    title: "E-Commerce",
     description:
-      "Streamlined tooling and automation that removes repetitive work.",
-    imageUrl: "/gold.jpg",
+      "Online stores built to convert, from checkout to fulfillment.",
+    imageUrl: "/e-commerce.webp",
   },
-  {
-    title: "System Intergrations",
-    description:
-      "Streamlined tooling and automation that removes repetitive work.",
-    imageUrl: "/gold.jpg",
-  },
-  {
-    title: "Data Reporting",
-    description:
-      "Streamlined tooling and automation that removes repetitive work.",
-    imageUrl: "/gold.jpg",
-  },
+  
 ];
 
 export function Services() {
@@ -145,6 +134,16 @@ function ServiceTile({
       <span className={styles.number}>{String(index + 1).padStart(2, "0")}</span>
       <span className={styles.title}>{title}</span>
       <p className={styles.description}>{description}</p>
+      <a
+        href={`https://wa.me/447389185503?text=${encodeURIComponent(
+          `Hi Ethan. I'd like a quote for ${title}.`,
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.cta}
+      >
+        Get a Quote
+      </a>
       <div className={styles.imageFrame}>
         <ImageReveal
           src={imageUrl}

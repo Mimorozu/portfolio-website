@@ -13,6 +13,20 @@
   }
 }
 
+/* Mobile: collapse to 2 columns, image always in the right column regardless of
+   which of the 4 desktop column slots the active route occupies. */
+@media (max-width: 639px) {
+  .column:nth-child(2),
+  .column:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .column:nth-child(4) {
+    display: none;
+  }
+}
+
 .column {
   position: relative;
   height: 100%;
@@ -41,11 +55,18 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
+@media (max-width: 639px) {
+  .nestedGrid {
+    display: none;
+  }
+}
+
 .nestedGrid span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  width: 50%;
   gap: 0;
   line-height: 0;
   padding-left: 1rem;
@@ -67,8 +88,21 @@
   padding: 2rem 2rem 0;
 }
 
+@media (max-width: 639px) {
+  .copy {
+    justify-content: flex-end;
+    padding: 0 1.25rem 2.5rem;
+  }
+}
+
 .copyBox {
   width: 45vw;
+}
+
+@media (max-width: 639px) {
+  .copyBox {
+    width: 70vw;
+  }
 }
 
 .srOnly {
@@ -86,8 +120,9 @@
 .subtitle {
   mix-blend-mode: difference;
   margin-top: 1rem;
+  max-width: 32ch;
   font-family: var(--font-secondary);
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #fff;
 }
 

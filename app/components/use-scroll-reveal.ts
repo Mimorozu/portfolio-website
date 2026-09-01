@@ -29,10 +29,9 @@ export function useScrollReveal<T extends HTMLElement>() {
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
       // Progress 0 when the container's top is at the bottom of the viewport, 1 once it's
-      // scrolled a further 1.2 viewport heights up — a full screen's worth of scroll, so
-      // the reveal reads as a scrub across the section rather than a snap near the top.
+      // scrolled a further 0.95 viewport heights up.
       const start = vh;
-      const end = vh * -0.2;
+      const end = vh * 0.05;
       const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
 
       // Total slots the sweep travels: one per word, plus the extra SPREAD the last word

@@ -47,25 +47,35 @@
 
 .whatsappButton {
   --progress: 0;
+  --whatsapp-green: #25d366;
+  --whatsapp-green-hover: #1ebe5b;
   display: inline-flex;
   align-items: center;
+  gap: 0.55rem;
   align-self: flex-start;
   margin-top: 0.5rem;
   padding: 0.7rem 1.4rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--whatsapp-green);
   border-radius: 999px;
   font-family: var(--font-secondary);
   font-size: 0.875rem;
   letter-spacing: -0.01em;
-  color: var(--accent);
+  color: var(--whatsapp-green);
   background: transparent;
   opacity: var(--progress);
   filter: blur(calc((1 - var(--progress)) * 4px));
   transform: translateY(calc((1 - var(--progress)) * 0.3em));
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .whatsappButton:hover {
-  background: var(--accent);
-  color: var(--accent-foreground);
+  background: var(--whatsapp-green);
+  color: #fff;
+  border-color: var(--whatsapp-green);
+}
+
+.whatsappIcon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
 }

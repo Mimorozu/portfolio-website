@@ -1,4 +1,6 @@
-// Hero copy for "/contact" renders inside HeroGrid; this page is reserved for future below-the-fold content.
+import { Contact as ContactSection } from "../components/contact";
+
+// Hero copy for "/contact" renders inside HeroGrid; this page holds the below-the-fold content.
 export default function Contact() {
-  return null;
+  return <ContactSection />;
 }

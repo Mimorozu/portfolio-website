@@ -35,6 +35,7 @@
   color: var(--foreground);
   text-transform: uppercase;
   opacity: 0;
+  mix-blend-mode: difference;
   transition: opacity 0.8s ease;
 }
 
@@ -135,4 +136,42 @@
   width: 60%;
   height: 60%;
   object-fit: contain;
+}
+
+@media (max-width: 639px) {
+  .label,
+  .subtitle {
+    display: none;
+  }
+
+  .title {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .tile {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "number badge"
+      "info info"
+      "date date";
+    row-gap: 0.5rem;
+  }
+
+  .number {
+    grid-area: number;
+    align-self: center;
+  }
+
+  .info {
+    grid-area: info;
+  }
+
+  .date {
+    grid-area: date;
+  }
+
+  .badge {
+    grid-area: badge;
+  }
 }

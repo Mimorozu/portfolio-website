@@ -28,26 +28,5 @@ export const projects: Project[] = [
     crmDemoUrl: "https://crm-demo-xi-two.vercel.app/",
     website: "https://www.kitchenworktopexperts.co.uk/"
   },
-  {
-    slug: "barking-legs",
-    name: "Barking Legs",
-    service: "Website / Content Management System / CRM",
-    imageUrl: "/chip.jpg",
-    description: [
-      "Placeholder — a short write-up of what this project does, the problem it solves, and the stack behind it.",
-    ],
-    servicesDelivered: ["Website", "Content Management System", "CRM"],
-    techStack: ["Next.JS", "PostgreSQL", "GitHub", "Railway", "Vercel"],
-  },
-  {
-    slug: "project-three",
-    name: "Project Name",
-    service: "Website & Web Applications",
-    imageUrl: "/world.png",
-    description: [
-      "Placeholder — a short write-up of what this project does, the problem it solves, and the stack behind it.",
-    ],
-    servicesDelivered: ["Service Name", "Service Name", "Service Name"],
-    techStack: ["Tech Name", "Tech Name", "Tech Name", "Tech Name"],
-  },
+
 ];

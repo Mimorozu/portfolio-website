@@ -62,14 +62,21 @@ export function Footer() {
         </div>
 
         <div className={styles.column}>
-          <a href="#" className={styles.linkMuted}>
+          <a
+            href="https://github.com/Mimorozu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.linkMuted}
+          >
             GitHub
           </a>
-          <a href="#" className={styles.linkMuted}>
-            LinkedIn
-          </a>
-          <a href="#" className={styles.linkMuted}>
-            X / Twitter
+          <a
+            href="https://www.instagram.com/alwayshungryforchicken/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.linkMuted}
+          >
+            Instagram
           </a>
         </div>
 

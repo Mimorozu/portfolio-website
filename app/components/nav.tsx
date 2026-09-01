@@ -27,7 +27,16 @@ export function Nav() {
   return (
     <>
       <div className={styles.wrapper}>
-        <button className={styles.button} onClick={() => setOpen((v) => !v)}>
+        <button
+          className={`${styles.button} ${open ? styles.buttonOpen : ""}`}
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? "Close menu" : "Open menu"}
+        >
+          <span className={styles.burger}>
+            <span className={styles.burgerLine} />
+            <span className={styles.burgerLine} />
+          </span>
           {open ? "Close" : "Menu"}
         </button>
       </div>
@@ -39,7 +48,7 @@ export function Nav() {
           {open && (
             <div className={styles.overlayImageFrame}>
               <ImageReveal
-                src="/teeth.png"
+                src="/navImage.webp"
                 alt=""
                 fill
                 sizes="25vw"
@@ -52,7 +61,12 @@ export function Nav() {
         <div className={`${styles.overlayColumn} ${styles.linksColumn}`}>
           <nav className={styles.links}>
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className={styles.link}>
+              <Link
+                key={link.href}
+                href={link.href}
+                className={styles.link}
+                onClick={() => setOpen(false)}
+              >
                 {link.label}
               </Link>
             ))}

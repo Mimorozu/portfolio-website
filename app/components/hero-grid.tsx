@@ -15,7 +15,7 @@ const routes = [
     path: "/",
     src: "/walk.jpg",
     title: "ETHAN\nNERWAL",
-    subtitle: "Software engineer — portfolio in progress.",
+    subtitle: "Full stack developer — elevating businesses through better software.",
     accent: false,
     column: 1,
   },
@@ -38,9 +38,9 @@ const routes = [
   },
   {
     path: "/contact",
-    src: "/teeth.png",
+    src: "/contact-img.png",
     title: "Contact",
-    subtitle: "Placeholder — page content coming soon.",
+    subtitle: "Full stack developer — let's talk about your project.",
     accent: true,
     column: 2,
   },
@@ -69,6 +69,7 @@ export function HeroGrid() {
           {active && i === active.column && (
             <>
               <ImageReveal
+                key={active.path}
                 src={active.src}
                 alt=""
                 fill

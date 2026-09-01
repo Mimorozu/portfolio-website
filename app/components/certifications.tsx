@@ -6,22 +6,16 @@ import styles from "./certifications.module.css";
 // Placeholder entries — swap in the real certifications (and real badge images).
 const certifications = [
   {
-    title: "Certification Title",
-    issuer: "Issuing Organization",
-    date: "Month Year",
-    badgeUrl: "/badge-placeholder.svg",
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    // date: "Month Year",
+    badgeUrl: "/aws-cloud-practitioner.png",
   },
   {
-    title: "Certification Title",
-    issuer: "Issuing Organization",
-    date: "Month Year",
-    badgeUrl: "/badge-placeholder.svg",
-  },
-  {
-    title: "Certification Title",
-    issuer: "Issuing Organization",
-    date: "Month Year",
-    badgeUrl: "/badge-placeholder.svg",
+    title: "Microsoft Certified: Azure Fundamentals",
+    issuer: "Microsoft",
+    // date: "Month Year",
+    badgeUrl: "/azure-fundamentals.png",
   },
 ];
 
@@ -83,7 +77,7 @@ function CertTile({
 }: {
   title: string;
   issuer: string;
-  date: string;
+  date?: string;
   badgeUrl: string;
   index: number;
 }) {
@@ -118,7 +112,7 @@ function CertTile({
         <span className={styles.certTitle}>{title}</span>
         <span className={styles.issuer}>{issuer}</span>
       </div>
-      <span className={styles.date}>{date}</span>
+      {date && <span className={styles.date}>{date}</span>}
       <div className={styles.badge}>
         <img src={badgeUrl} alt="" className={styles.badgeImage} />
       </div>

@@ -1,21 +1,63 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { IconType } from "react-icons";
+import { FaAws } from "react-icons/fa6";
+import {
+  SiExpress,
+  SiGit,
+  SiGithub,
+  SiJavascript,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiNpm,
+  SiPhp,
+  SiPostgresql,
+  SiPython,
+  SiRailway,
+  SiReact,
+  SiVercel,
+} from "react-icons/si";
+import { TbBrandAzure, TbDatabase } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
 import styles from "./tech-stack.module.css";
 
 // Placeholder groupings/items — swap in the real stack.
 const categories = [
-  { label: "Languages", items: ["Skill Name", "Skill Name", "Skill Name", "Skill Name"] },
+  { label: "Languages", items: ["JavaScript", "Python", "PHP", "SQL"] },
   {
     label: "Frameworks & Libraries",
-    items: ["Skill Name", "Skill Name", "Skill Name", "Skill Name"],
+    items: ["React", "Next.js", "Node.js", "Express"],
   },
-  { label: "Tools & Platforms", items: ["Skill Name", "Skill Name", "Skill Name", "Skill Name"] },
+  { label: "Tools & Platforms", items: ["Git", "GitHub", "VS Code", "npm"] },
   {
     label: "Cloud & Infrastructure",
-    items: ["Skill Name", "Skill Name", "Skill Name", "Skill Name"],
+    items: ["MongoDB", "PostgreSQL", "Vercel", "AWS", "Azure", "Railway"],
   },
 ];
+
+// SQL has no single owning brand, so it gets a generic database glyph instead of a logo.
+const techIcons: Record<string, IconType> = {
+  JavaScript: SiJavascript,
+  Python: SiPython,
+  PHP: SiPhp,
+  SQL: TbDatabase,
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  "Node.js": SiNodedotjs,
+  Express: SiExpress,
+  Git: SiGit,
+  GitHub: SiGithub,
+  "VS Code": VscVscode,
+  npm: SiNpm,
+  MongoDB: SiMongodb,
+  PostgreSQL: SiPostgresql,
+  Vercel: SiVercel,
+  AWS: FaAws,
+  Azure: TbBrandAzure,
+  Railway: SiRailway,
+};
 
 export function TechStack() {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -56,15 +98,24 @@ export function TechStack() {
         </div>
       </div>
 
-      <div className={styles.categories}>
-        {categories.map((category, i) => (
-          <CategoryRow
-            key={category.label}
-            label={category.label}
-            items={category.items}
-            index={i}
-          />
-        ))}
+      <div className={styles.terminal}>
+        <div className={styles.terminalHeader}>
+          <span className={styles.dot} />
+          <span className={styles.dot} />
+          <span className={styles.dot} />
+          <span className={styles.terminalPath}>~/stack.json</span>
+        </div>
+        <div className={styles.categories}>
+          {categories.map((category, i) => (
+            <CategoryRow
+              key={category.label}
+              label={category.label}
+              items={category.items}
+              index={i}
+            />
+          ))}
+          <span className={styles.cursor} aria-hidden />
+        </div>
       </div>
     </div>
   );
@@ -106,13 +157,17 @@ function CategoryRow({
       className={`${styles.category} ${visible ? styles.categoryVisible : ""}`}
       style={{ transitionDelay: `${Math.min(index * 0.06, 0.3)}s` }}
     >
-      <span className={styles.categoryLabel}>{label}</span>
+      <span className={styles.categoryLabel}>// {label}</span>
       <div className={styles.tags}>
-        {items.map((item, i) => (
-          <span key={`${item}-${i}`} className={styles.tag}>
-            {item}
-          </span>
-        ))}
+        {items.map((item, i) => {
+          const Icon = techIcons[item];
+          return (
+            <span key={`${item}-${i}`} className={styles.tag}>
+              {Icon && <Icon className={styles.tagIcon} aria-hidden />}
+              {item}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
